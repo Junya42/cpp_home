@@ -1,0 +1,6 @@
+str
+    Another string with the subject to search for.
+pos
+    Position of the first character in the string to be considered in the search.
+    If this is greater than the string length, the function never finds matches.
+    Note: The first character is denoted by a value of 0 (not 1): A value of 0 means that the entire string is searched.
