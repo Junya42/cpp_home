@@ -26,8 +26,6 @@ Base	*generate( void )
 			ptr = new C;
 			std::cout << "Generating a Class C pointer" << std::endl;
 			break;
-		default:
-			break;
 	}
 	return (ptr);
 }

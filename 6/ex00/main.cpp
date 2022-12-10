@@ -269,12 +269,13 @@ void	convert(int type, std::string str)
 	}
 }
 
-void	check_char(std::string str)
+bool	check_char(std::string str)
 {
 	if (str.length() == 3)
 		if (str[0] == '\'')
 			if (str[2] == '\'')
-				return (convert(8, str));
+				return (convert(8, str), true);
+	return false;
 }
 
 bool is_expection(std::string str)
@@ -316,8 +317,8 @@ int main(int ac, char **av)
 	else
 	{
 		errno = 0;
-		check_char(str);
-		convert(get_type(str), str);
+		if (!check_char(str))
+			convert(get_type(str), str);
 	}
 	return (0);
 }
